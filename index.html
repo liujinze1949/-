@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VStream</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --text-primary: #2d3748;
+            --text-secondary: #64748b;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', system-ui;
+            background: #f8f9fc;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        /* 导航系统 */
+        .navbar {
+            padding: 0.8rem 5%;
+            background: white;
+            border-bottom: 1px solid #eaeff5;
+        }
+
+        .brand-logo {
+            height: 32px;
+            width: auto;
+        }
+
+        /* 品牌介绍区 */
+        .brand-intro {
+            text-align: center;
+            padding: 1.5rem 5% 0.8rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .brand-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.3rem;
+        }
+
+        /* 紧凑卡片容器 */
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 0.5rem auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 600px;
+            transition: transform 0.2s ease;
+        }
+
+        /* 内容区域优化 */
+        .card-content {
+            flex: 1;
+            padding-right: 1rem;
+        }
+
+        .tool-title {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin: 0 0 0.3rem;
+            font-weight: 600;
+        }
+
+        .tool-description {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0 0 0.5rem;
+        }
+
+        /* 紧凑操作按钮 */
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 
+                background 0.2s ease,
+                transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .action-btn:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+
+        .arrow-icon {
+            color: white;
+            font-size: 1rem;
+            margin-left: 1px;
+        }
+
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            .tool-card {
+                padding: 0.8rem;
+                margin: 0.5rem 5%;
+                border-radius: 8px;
+            }
+            .brand-title {
+                font-size: 1.3rem;
+            }
+            .tool-title {
+                font-size: 1rem;
+            }
+            .tool-description {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
+            .action-btn {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="https://i.imgs.ovh/2025/05/04/rlLI6.png" 
+             class="brand-logo" 
+             alt="VStream"
+             loading="lazy">
+    </nav>
+
+    <div class="brand-intro">
+        <h1 class="brand-title">VStream</h1>
+        <p class="tool-description" style="text-align: center; color: var(--text-secondary);">
+            简单、快速、效率
+        </p>
+    </div>
+
+    <!-- 二维码生成工具卡片 -->
+    <div class="tool-card">
+        <div class="card-content">
+            <h3 class="tool-title">PixelaQR</h3>
+            <p class="tool-description">
+                文本/链接 转换成二维码、扫描维码<br>
+            </p>
+        </div>
+        <button class="action-btn" onclick="window.open('https://pixelaqr.pages.dev/')">
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </button>
+    </div>
+
+    <!-- 图片精修工具卡片 -->
+    <div class="tool-card">
+        <div class="card-content">
+            <h3 class="tool-title">敬请期待...</h3>
+            <p class="tool-description">
+                敬请期待...<br>
+            </p>
+        </div>
+        <button class="action-btn" onclick="window.open('/editor')">
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </button>
+    </div>
+</body>
+              </html>
